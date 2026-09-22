@@ -1,0 +1,2 @@
+09/22/2026-06:42:44.376130  [**] [1:1000003:1] CYSA-NIDS: JuiceShop SQLi Tautology Detected [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 172.17.0.1:41782 -> 172.17.0.2:3000
+09/22/2026-06:44:05.632539  [**] [1:1000004:2] CYSA-NIDS: JuiceShop Directory Traversal Attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 172.17.0.1:46878 -> 172.17.0.2:3000

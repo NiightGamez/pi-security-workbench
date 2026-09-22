@@ -1,0 +1,5 @@
+# Signature 1: SQL Injection Pattern (Tautology OR logic in URI)
+alert http any any -> any any (msg:"CYSA-NIDS: JuiceShop SQLi Tautology Detected"; flow:established,to_server; http.uri; pcre:"/('|\%27)\s*(or|OR|oR|Or)\s*(\d+|\w+)\s*=\s*(\d+|\w+)/"; classtype:web-application-attack; sid:1000003; rev:1;)
+
+# Signature 2: Directory Traversal Attempt (Catching raw percent-encoded dots/slashes)
+alert http any any -> any any (msg:"CYSA-NIDS: JuiceShop Directory Traversal Attempt"; flow:established,to_server; http.uri.raw; content:"/ftp"; content:"..%2f"; nocase; classtype:web-application-attack; sid:1000004; rev:2;)
