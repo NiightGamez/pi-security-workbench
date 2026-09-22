@@ -1,0 +1,3 @@
+## Canary Trap Watch Rules (CySA+ Blue Team Lab)
+-w /opt/backup/cloud-tokens/aws_prod_keys.env -p rwa -k tripwire_aws
+-w /var/www/internal-api/db_config.php -p rwa -k tripwire_db
